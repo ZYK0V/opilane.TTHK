@@ -1,0 +1,101 @@
+#ulesanne 1
+from re import M
+
+
+number=(input("arv = "))
+if number.isalpha():
+    print("see on tekst")
+elif number.isdigit():
+    number=int(number) #str => digit
+    if number>=0:
+        if (number%2)==0:
+            print(number,"on paaris arv")
+        else:
+            print(number,"on paaritu arv")
+    else:
+        print(number,"on negatiivne arv")
+else:
+    print(number,"on tekst")
+
+#ulesanne 2
+print("sisestage kolmnurga 3 nurka")
+a=float(input("arv 1 = "))
+b=float(input("arv 2 = "))
+c=float(input("arv 3 = "))
+if a>=0 and b>=0 and c>=0:
+    if a+b+c==180:
+        if a==b==c:
+            print("kolmnurk on vordkulgsed")
+        elif a==b or a==c or c==b:
+            print("kolmnurk on vordhaarne")
+        else:
+            print("kolmnurk on mitmekulgne")
+    else:
+        print("see pole kolmnurk")
+else:
+    print("on vaja >0")
+
+#ulsanne 3
+print("kas sa tahad dekodeerida nimesse nadalapaeva number?")
+otvet=(input("(jah/ei)"))
+if otvet.lower()=="jah" or otvet.lower()=="ei":
+    if otvet.lower()=="jah":
+        nomer=(input("sisestage vaartus vahemikus 1 kuni 7 = "))
+        if nomer=="1":
+            print(nomer,"- Esmaspaev")
+        elif nomer=="2":
+            print(nomer,"- Teisipaev")
+        elif nomer=="3":
+            print(nomer,"- Kolmapaev")
+        elif nomer=="4":
+            print(nomer,"- Neljapaev")
+        elif nomer=="5":
+            print(nomer,"- Reede")
+        elif nomer=="6":
+            print(nomer,"- Laupaev")
+        elif nomer=="7":
+            print(nomer,"- Puhapaev")
+        else:
+            print(nomer,"on vale arv, peab olema 1 - 7")
+    else:
+        print("te valisite Ei")
+else:
+    print("vale vastus")
+
+#ulesanne 4
+d=input("sisestage paev millal te sundisite (1-31) ")
+m=input("sisestage kuu millal te sundisite (1-12) ")
+if d.isalpha() or m.isalpha():
+    print("vale arv")
+elif d.isdigit() and m.isdigit():
+    d=int(d)
+    m=int(m)
+    if d>0 and d<32 and m>0 and m<13:
+        if (d>20 and m==3) or (d<20 and m==4):
+            print("Jaar")
+        elif (d>19 and m==4) or (d<21 and m==5):
+            print("S6nn")
+        elif (d>20 and m==5) or (d<22 and m==6):
+            print("Kaksikud")
+        elif (d>21 and m==6) or (d<23 and m==7):
+            print("Vahk")
+        elif (d>22 and m==7) or (d<23 and m==8):
+            print("Lovi")
+        elif (d>22 and m==8) or (d<23 and m==9):
+            print("Neitsi")
+        elif (d>22 and m==9) or (d<23 and m==10):
+            print("Kaalud")
+        elif (d>22 and m==10) or (d<22 and m==11):
+            print("Skorpion")
+        elif (d>21 and m==11) or (d<22 and m==12):
+            print("Ambur")
+        elif (d>21 and m==12) or (d<20 and m==1):
+            print("Kaljukits")
+        elif (d>19 and m==1) or (d<19 and m==2):
+            print("Veevalaja")
+        elif (d>18 and m==2) or (d<21 and m==3):
+            print("Kalad")
+    else:
+        print("vale arv paev peab olema (1-31) ja kuu peab olema (1-12)")
+else:
+    print("vale arv")
