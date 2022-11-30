@@ -28,7 +28,7 @@ if vastus1==1:
     elif indeks>40:
         indeksvastus="See on Tervisele ohtlik rasvumine!"
     else:
-        indeksvastus=ValueError
+        indeksvastus="vale vaartus"
     print(indeksvastus,"\n")
 else:
     print("Kahju! See on vaga kasulik info!\n")
